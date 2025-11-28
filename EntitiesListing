@@ -1,0 +1,81 @@
+{
+  "name": "Listing",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Title of the listing"
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed description"
+    },
+    "price": {
+      "type": "number",
+      "description": "Price in ZAR"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "electronics",
+        "furniture",
+        "vehicles",
+        "clothing",
+        "hobbies",
+        "property",
+        "jobs",
+        "services",
+        "other"
+      ],
+      "description": "Category of the item"
+    },
+    "condition": {
+      "type": "string",
+      "enum": [
+        "new",
+        "like_new",
+        "good",
+        "fair",
+        "poor"
+      ],
+      "default": "good"
+    },
+    "images": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Array of image URLs"
+    },
+    "suburb": {
+      "type": "string",
+      "description": "Location name"
+    },
+    "lat": {
+      "type": "number",
+      "description": "Latitude"
+    },
+    "lng": {
+      "type": "number",
+      "description": "Longitude"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "sold",
+        "archived"
+      ],
+      "default": "active"
+    },
+    "views": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "required": [
+    "title",
+    "price",
+    "images"
+  ]
+}

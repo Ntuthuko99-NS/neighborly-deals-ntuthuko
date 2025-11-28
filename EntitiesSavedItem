@@ -1,0 +1,12 @@
+{
+  "name": "SavedItem",
+  "type": "object",
+  "properties": {
+    "listing_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "listing_id"
+  ]
+}

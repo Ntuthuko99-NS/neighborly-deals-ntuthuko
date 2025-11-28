@@ -1,0 +1,32 @@
+{
+  "name": "Message",
+  "type": "object",
+  "properties": {
+    "listing_id": {
+      "type": "string",
+      "description": "ID of the related listing"
+    },
+    "content": {
+      "type": "string",
+      "description": "Message text"
+    },
+    "to_user_id": {
+      "type": "string",
+      "description": "Recipient user ID"
+    },
+    "from_user_id": {
+      "type": "string",
+      "description": "Sender user ID"
+    },
+    "is_read": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "content",
+    "to_user_id",
+    "listing_id",
+    "from_user_id"
+  ]
+}
